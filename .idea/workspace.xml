@@ -4,23 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56085dc7-9d83-4dca-a745-7e1ec31e2fda" name="Changes" comment="創建項目">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/entity/RestBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="56085dc7-9d83-4dca-a745-7e1ec31e2fda" name="Changes" comment="配置登入驗證接口返回JSON數據">
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/AuthorizeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/AuthorizeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/impl/AuthorizeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/LoginPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/RegisterPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/net/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/views/IndexView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/views/WelcomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com.example/StudyProjectBackendApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/src/test/java/org/example/studyprojectbackend/StudyProjectBackendApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/assets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/TheWelcome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/WelcomeItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/views/AboutView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +51,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Vue Options API Component" />
+        <option value="JavaScript File" />
+        <option value="Vue Composition API Component" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,8 +75,14 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.StudyProjectBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StudyProjectBackendApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StudyProjectBackendApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;zulu-17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -68,11 +98,16 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;mysql&quot;
+    ],
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Options API Component&quot;,
+      &quot;Vue Composition API Component&quot;
     ]
   }
 }</component>
@@ -101,6 +136,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudyProjectBackendApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-project-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.StudyProjectBackendApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StudyProjectBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="study-project-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.StudyProjectBackendApplication" />
@@ -122,6 +173,7 @@
       <list>
         <item itemvalue="Application.StudyProjectBackendApplication" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="JUnit.StudyProjectBackendApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +195,12 @@
       <updated>1745569643843</updated>
       <workItem from="1745569644922" duration="4664000" />
       <workItem from="1746002944947" duration="9047000" />
-      <workItem from="1746080443636" duration="825000" />
+      <workItem from="1746080443636" duration="12597000" />
+      <workItem from="1746179412590" duration="3549000" />
+      <workItem from="1746425266299" duration="8580000" />
+      <workItem from="1746519670490" duration="7709000" />
+      <workItem from="1746685016437" duration="4418000" />
+      <workItem from="1746773337432" duration="12752000" />
     </task>
     <task id="LOCAL-00001" summary="創建項目">
       <option name="closed" value="true" />
@@ -161,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745571091898</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="配置登入驗證接口返回JSON數據">
+      <option name="closed" value="true" />
+      <created>1746083429577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746083429577</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +257,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="創建項目" />
-    <option name="LAST_COMMIT_MESSAGE" value="創建項目" />
+    <MESSAGE value="配置登入驗證接口返回" />
+    <MESSAGE value="配置登入驗證接口返回JSON數據" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置登入驗證接口返回JSON數據" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="jakarta.validation.ConstraintViolationException" package="jakarta.validation" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

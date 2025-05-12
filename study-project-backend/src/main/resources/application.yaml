@@ -4,3 +4,19 @@ spring:
     url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 860503
+  mail:
+    host: smtp.gmail.com              # SMTP 主机
+    port: 465                         # 端口号
+    username: jonpapaye13@gmail.com   # 登录用户名
+    password: mfqotiggjmofkhdi        # 应用专用密码（App Password）:contentReference[oaicite:4]{index=4}
+    protocol: smtp                    # 可选：指定协议，默认为 smtp
+    default-encoding: UTF-8           # 可选：编码
+    properties:
+      mail:
+        smtp:
+          auth: true                  # ② 开启认证 :contentReference[oaicite:5]{index=5}
+          starttls.enable: true       # ③ 启用 STARTTLS（对于 587 推荐）:contentReference[oaicite:6]{index=6}
+          socketFactory:
+            port: 465                 # ④ SSL 套接字端口
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
