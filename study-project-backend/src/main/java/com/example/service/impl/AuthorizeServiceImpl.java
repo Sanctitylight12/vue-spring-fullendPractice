@@ -4,6 +4,7 @@ import com.example.entity.Account;
 import com.example.mapper.UserMapper;
 import com.example.service.AuthorizeService;
 import jakarta.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.mail.MailException;
@@ -12,6 +13,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -32,6 +34,9 @@ public class AuthorizeServiceImpl implements AuthorizeService {
 
     @Resource
     StringRedisTemplate stringRedisTemplate;
+
+
+    BCryptPasswordEncoder encoder=new BCryptPasswordEncoder();
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -62,11 +67,16 @@ public class AuthorizeServiceImpl implements AuthorizeService {
      *
      */
     @Override
-    public boolean sendVaildateEmail(String email,String sessionId) {
-        String key="email"+sessionId+ ":" +email;
+    public String sendVaildateEmail(String email,String sessionId) {
+        String key="email:"+sessionId+ ":" +email;
         if(Boolean.TRUE.equals(stringRedisTemplate.hasKey(key))){
            Long expire= Optional.ofNullable(stringRedisTemplate.getExpire(key,TimeUnit.SECONDS)).orElse(0L);
-           if(expire>120)return false;
+           if(expire>120) return "請求頻繁，請稍後再試";
+        }
+
+        if(mapper.findAccountByNameOrEmail(email)!=null){
+            return "此e-mail，已經註冊了!";
+
         }
 
         Random random=new Random();
@@ -81,11 +91,38 @@ public class AuthorizeServiceImpl implements AuthorizeService {
 
             //**
             stringRedisTemplate.opsForValue().set(key,String.valueOf(code),3, TimeUnit.MINUTES);
-            return true;
+            return null;
         }catch (MailException e){
             e.printStackTrace();
-            return false;
+            return "驗證碼發送失敗，請確認e-mail是否正確";
         }
 
     }
+
+
+    @Override
+    public String validateAndRegister(String username,String password,String email,String code,String sessionId){
+        String key="email:"+sessionId+ ":" +email;
+
+        if(Boolean.TRUE.equals(stringRedisTemplate.hasKey(key))){
+            String s=stringRedisTemplate.opsForValue().get(key);
+            if(s==null){return "驗證碼過期，請重新獲得驗證碼";}
+
+            if(s.equals(code)){
+                password=encoder.encode(password);
+                if(mapper.createAccount(username, password, email)>0){
+                    return null;
+                }else{
+                    return "內部錯誤，請聯繫管理員";
+                }
+            }else {
+                return "驗證碼錯誤，請確認後再提交";
+            }
+        }else {
+            return "請先獲得驗證碼驗證";
+        }
+    }
+
+
+
 }

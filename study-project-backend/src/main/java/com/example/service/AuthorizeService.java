@@ -4,8 +4,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface AuthorizeService extends UserDetailsService {
 
-    boolean sendVaildateEmail(String email,String sessionId);
+    String sendVaildateEmail(String email,String sessionId);
 
-
+    String validateAndRegister(String username,String password,String email,String code,String sessionId);
 
 }

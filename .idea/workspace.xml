@@ -4,43 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56085dc7-9d83-4dca-a745-7e1ec31e2fda" name="Changes" comment="配置登入驗證接口返回JSON數據">
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/AuthorizeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/entity/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/AuthorizeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/impl/AuthorizeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/LoginPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/RegisterPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/net/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/views/IndexView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/views/WelcomeView.vue" afterDir="false" />
+    <list default="true" id="56085dc7-9d83-4dca-a745-7e1ec31e2fda" name="Changes" comment="完成郵件驗證碼&amp;發送">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/assets/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/assets/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/assets/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/TheWelcome.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/WelcomeItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconCommunity.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconDocumentation.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconEcosystem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconSupport.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/icons/IconTooling.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/views/AboutView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/views/HomeView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-project-frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/AuthorizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/AuthorizeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/AuthorizeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/impl/AuthorizeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/impl/AuthorizeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/RegisterPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/RegisterPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +74,9 @@
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
     ],
     &quot;vue.recent.templates&quot;: [
       &quot;Vue Options API Component&quot;,
@@ -201,6 +174,7 @@
       <workItem from="1746519670490" duration="7709000" />
       <workItem from="1746685016437" duration="4418000" />
       <workItem from="1746773337432" duration="12752000" />
+      <workItem from="1747034780653" duration="9607000" />
     </task>
     <task id="LOCAL-00001" summary="創建項目">
       <option name="closed" value="true" />
@@ -226,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746083429577</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完成郵件驗證碼&amp;發送">
+      <option name="closed" value="true" />
+      <created>1747034831752</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747034831752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +241,8 @@
     <MESSAGE value="創建項目" />
     <MESSAGE value="配置登入驗證接口返回" />
     <MESSAGE value="配置登入驗證接口返回JSON數據" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置登入驗證接口返回JSON數據" />
+    <MESSAGE value="完成郵件驗證碼&amp;發送" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成郵件驗證碼&amp;發送" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -41,6 +41,7 @@ const validatePassword = (rule, value, callback) => {
 
 const formRef = ref()
 const isEmailValid = ref(false)
+const coldTime=ref(0)
 
 const onValidate=(prop,isValid)=>{
   if(prop==='email'){
@@ -51,7 +52,16 @@ const onValidate=(prop,isValid)=>{
 const register=()=>{
   formRef.value.validate((isValid) => {
     if(isValid) {
-
+      post('/api/auth/register',{
+        username: form.username,
+        password: form.password,
+        email: form.email,
+        code: form.code
+      },(message)=>{
+        ElMessage.success(message)
+        console.log("success")
+        router.push("/")
+      })
     }else {
       ElMessage.warning('請完整填寫內容!!')
     }
@@ -64,6 +74,8 @@ const validateEmail=()=>{
   },(message,status) => {
     console.log('狀態碼', status)
     ElMessage.success(message)
+    coldTime.value=60
+    setInterval(()=>coldTime.value--,1000)
   })
 
 }
@@ -112,7 +124,7 @@ const rules={
           <el-form :model="form" :rules="rules" @validate="onValidate" ref="formRef">
 
             <el-form-item prop="username">
-              <el-input  v-model="form.username" class="pw"  type="text" placeholder="帳號名稱">
+              <el-input  v-model="form.username" :maxlength="16" class="pw"  type="text" placeholder="帳號名稱">
                 <template #prefix>
                   <el-icon><User /></el-icon>
                 </template>
@@ -120,7 +132,7 @@ const rules={
             </el-form-item>
 
             <el-form-item prop="password">
-              <el-input  v-model="form.password" class="pw"  type="password" placeholder="密碼">
+              <el-input  v-model="form.password" :maxlength="16" class="pw"  type="password" placeholder="密碼">
                 <template #prefix>
                   <el-icon><Lock /></el-icon>
                 </template>
@@ -129,7 +141,7 @@ const rules={
             </el-form-item>
 
             <el-form-item prop="password_repeat">
-              <el-input  v-model="form.password_repeat" class="pw"  type="password" placeholder="重複輸入密碼">
+              <el-input  v-model="form.password_repeat" :maxlength="16" class="pw"  type="password" placeholder="重複輸入密碼">
                 <template #prefix>
                   <el-icon><Lock /></el-icon>
                 </template>
@@ -151,7 +163,7 @@ const rules={
                 <el-row :gutter="10">
 
                   <el-col :span="18">
-                    <el-input class="inputCerti" v-model="form.code" type="text" placeholder="請輸入驗證碼">
+                    <el-input class="inputCerti" :maxlength="6" v-model="form.code" type="text" placeholder="請輸入驗證碼">
                       <template #prefix>
                         <el-icon><EditPen /></el-icon>
                       </template>
@@ -159,7 +171,8 @@ const rules={
                   </el-col>
 
                   <el-col :span="6">
-                    <el-button class="getCerti" type="success" plain @click="validateEmail"  :disabled="!isEmailValid">獲得驗證碼</el-button>
+                    <el-button class="getCerti" type="success" plain @click="validateEmail"  :disabled="!isEmailValid||coldTime>0">
+                      {{coldTime>0 ?'請稍後'+coldTime+'秒':'獲得驗證碼' }}</el-button>
                   </el-col>
 
                 </el-row>
