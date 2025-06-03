@@ -4,13 +4,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56085dc7-9d83-4dca-a745-7e1ec31e2fda" name="Changes" comment="完成郵件驗證碼&amp;發送">
+    <list default="true" id="56085dc7-9d83-4dca-a745-7e1ec31e2fda" name="Changes" comment="完成註冊功能">
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/config/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/entity/user/AccountUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/interceptor/AuthorizeInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/ForgetPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/bug.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/chart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/clipboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/component.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/documentation.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/drag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/education.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/example.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/excel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/exit-fullscreen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/eye-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/form.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/fullscreen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/guide.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/international.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/language.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/lock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/money.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/nested.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/password.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/pdf.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/people.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/peoples.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/qq.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/shopping.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/size.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/skill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/theme.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/tree-table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/tree.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/wechat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svg/zip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/icons/svgo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/btn.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/element-ui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/element-variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-project-frontend/src/styles/variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/controller/AuthorizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/entity/auth/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/AuthorizeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/AuthorizeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/impl/AuthorizeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-backend/src/main/java/com/example/service/impl/AuthorizeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/LoginPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/RegisterPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/components/welcome/RegisterPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/stores/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/stores/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-project-frontend/src/views/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study-project-frontend/src/views/IndexView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +93,8 @@
         <option value="AnnotationType" />
         <option value="Vue Options API Component" />
         <option value="JavaScript File" />
-        <option value="Vue Composition API Component" />
         <option value="Interface" />
+        <option value="Vue Composition API Component" />
         <option value="Class" />
       </list>
     </option>
@@ -37,13 +107,16 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2wDIItT3iYVBXZd1gVtApRYS7P8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.StudyProjectBackendApplication.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.StudyProjectBackendApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
@@ -56,7 +129,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;zulu-17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanct/IdeaProjects/study-project/study-project-frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanct/Desktop/vue-admin-template-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,7 +168,7 @@
       <recent name="C:\Users\sanct\IdeaProjects\study-project\study-project-backend\src\main\java\org\example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StudyProjectBackendApplication">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="StudyProjectBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.StudyProjectBackendApplication" />
       <module name="study-project-backend" />
@@ -144,8 +217,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StudyProjectBackendApplication" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="Application.StudyProjectBackendApplication" />
         <item itemvalue="JUnit.StudyProjectBackendApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -175,6 +248,12 @@
       <workItem from="1746685016437" duration="4418000" />
       <workItem from="1746773337432" duration="12752000" />
       <workItem from="1747034780653" duration="9607000" />
+      <workItem from="1747132630299" duration="2243000" />
+      <workItem from="1747259263223" duration="8134000" />
+      <workItem from="1747366355535" duration="2262000" />
+      <workItem from="1747625391308" duration="5729000" />
+      <workItem from="1747644666472" duration="1554000" />
+      <workItem from="1747704301968" duration="1920000" />
     </task>
     <task id="LOCAL-00001" summary="創建項目">
       <option name="closed" value="true" />
@@ -208,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747034831752</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成註冊功能">
+      <option name="closed" value="true" />
+      <created>1747132696910</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747132696910</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,11 +325,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="創建項目" />
     <MESSAGE value="配置登入驗證接口返回" />
     <MESSAGE value="配置登入驗證接口返回JSON數據" />
     <MESSAGE value="完成郵件驗證碼&amp;發送" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成郵件驗證碼&amp;發送" />
+    <MESSAGE value="完成註冊功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成註冊功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

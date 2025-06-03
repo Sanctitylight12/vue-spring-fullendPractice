@@ -69,13 +69,17 @@ const register=()=>{
 }
 
 const validateEmail=()=>{
+  coldTime.value = 60
   post('/api/auth/valid-email',{
     email: form.email
   },(message,status) => {
     console.log('狀態碼', status)
     ElMessage.success(message)
-    coldTime.value=60
-    setInterval(()=>coldTime.value--,1000)
+
+    setInterval(() => coldTime.value--, 1000)
+  },(message)=>{
+      ElMessage.warning(message)
+      coldTime.value=0
   })
 
 }

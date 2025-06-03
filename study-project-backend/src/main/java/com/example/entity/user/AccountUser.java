@@ -1,19 +1,17 @@
-package com.example.entity;
+package com.example.entity.user;
 
 import lombok.Data;
 
 @Data
-public class Account {
+public class AccountUser {
+
     int id;
     String username;
-    String password;
     String email;
+
 
     public String getUsername() {
         return username;
     }
 
-    public String getPassword() {
-        return password;
-    }
 }
