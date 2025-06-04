@@ -156,7 +156,7 @@ public class AuthorizeServiceImpl implements AuthorizeService {
     public boolean resetPassword(String password,String email){
 
         password=encoder.encode(password);
-        return mapper.resetPasswordByEmail(password,email)>0;
+        return mapper.resetPasswordByEmail(email,password)>0;
     }
 
 }

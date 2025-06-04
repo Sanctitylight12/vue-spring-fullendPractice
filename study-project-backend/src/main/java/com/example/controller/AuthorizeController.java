@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/auth")
 public class AuthorizeController {
 
-    private final String EMAIL_REGEX =  "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
+    private final String EMAIL_REGEX =  "^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
     private final String USERNAME_REGEX = "^[a-zA-Z0-9\\u4e00-\\u9fa5]+$";
 
@@ -87,15 +87,17 @@ public class AuthorizeController {
     @PostMapping("/do-reset")
     public RestBean<String> resetPassword(@Length(min=6,max = 16) @RequestParam("password") String password
                                           , HttpSession session){
-        String email=(String)session.getAttribute("reset-password");
+        String email=(String) session.getAttribute("reset-password");
+        System.out.println(email);
+        System.out.println(password);
         if(email==null){
             return RestBean.failure(401,"請先完成email驗證");
         }else if(service.resetPassword(password,email)){
             session.removeAttribute("reset-password");
-            service.resetPassword(password,email);
+//            service.resetPassword(password,email);
             return RestBean.success("密碼重置成功");
         }else{
-            return RestBean.failure(500,"內部錯誤，請聯繫管理員");
+            return RestBean.failure(500,"內部錯誤，請聯繫管理員23333");
         }
 
     }

@@ -1,7 +1,7 @@
 <script setup>
 
 import router from "@/router/index.js";
-import {Lock, User,Message,EditPen} from "@element-plus/icons-vue";
+import {Lock,Message,EditPen} from "@element-plus/icons-vue";
 import {reactive,ref} from "vue";
 import {post} from "@/net/index.js";
 import {ElMessage} from "element-plus";
